@@ -38,9 +38,10 @@ const Accueil = () => {
 
   return (
     <div className="App">
+     
       <Header />
       <div id="container">
-        <img src={photo1} id="photo" alt="Tozeur" className="fadeInImage" />
+       
         <hr />
         {showContent && (
           <div id="content" className="fadeInContent">

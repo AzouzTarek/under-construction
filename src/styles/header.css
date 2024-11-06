@@ -1,51 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* Style de la barre de navigation */
-html {
-    background-color: ghostwhite;
+/* Styles généraux pour la navbar */
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    position: relative;
+    height: 65vh;
+    background-image: url('../image/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.navbar {
+/* Conteneur pour les liens de navigation */
+.navbar .navbar-nav {
     display: flex;
-    flex-direction: column; /* Organiser la navbar en colonne */
-    margin: 0 50px; /* Ajout de marges sur les côtés */
-    background-color: #4a4a4a;
-    font-family: 'Poppins', sans-serif;
-    height: auto; /* S'adapte au contenu */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    border-radius: 0 0 17px 17px;
-    padding: 10px 0; /* Padding pour espacement */
-    align-items: center; /* Centrer le contenu horizontalement */
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Décaler les éléments de navigation vers le bas */
+.navbar .navbar-nav .Parent {
+    margin-top: 80px;
+    margin-right: 20px;
 }
 
 /* Logo */
 .Logo {
-    width: 300px;
+    width: 200px;
 }
 
 /* Styles pour les liens de navigation */
 .navbar .nav-link {
-    font-size: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #a5a5a5;
     transition: color 0.5s;
-    position: relative;
-    color: #fff;
-    padding: 5px 10px; /* Espacement des liens */
-    text-align: center; /* Centrer le texte des liens */
-    text-transform: uppercase; /* Transforme le texte en majuscules */
+    padding: 5px 10px;
+    text-transform: uppercase;
 }
 
-
-/* Changement de couleur pour tous les liens au survol */
+/* Effet au survol */
 .navbar .nav-link:hover {
-    color: #e1c340; /* Couleur au survol */
+    color: #e1c340;
 }
 
-/* Styles pour les éléments Parent (avec ligne sous chaque lien) */
-.navbar .Parent {
-    padding-bottom: 5px; /* Espacement sous les liens */
-}
-
-/* Pseudo-élément pour la ligne sous chaque lien */
 .navbar .Parent::after {
     content: "";
     display: block;
@@ -56,7 +61,6 @@ html {
     margin-top: 2px;
 }
 
-/* Révèle la ligne sous le lien au survol */
 .navbar .Parent:hover::after {
     width: 100%;
 }
@@ -66,46 +70,164 @@ html {
     position: relative;
 }
 
-/* Styles pour le dropdown-menu */
 .dropdown-menu {
-    display: none; /* Par défaut, caché */
-    position: absolute; 
+    display: none;
+    position: absolute;
     background-color: #343a40;
     border-radius: 5px;
     margin-top: 5px;
     padding: 0;
-    border: none;
 }
 
-/* Affiche le dropdown au survol */
 .hover-dropdown:hover .dropdown-menu {
     display: block;
     background-color: #4a4a4a;
 }
 
-/* Styles pour les éléments du dropdown */
 .dropdown-menu .nav-link {
     padding: 10px 15px;
     text-align: center;
 }
 
-/* Hover sur les éléments du dropdown */
 .dropdown-menu .nav-link:hover {
     background-color: #495057;
     color: #e1c340;
 }
 
-/* Centrer les éléments de navigation */
-.navbar .navbar-nav {
-    display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-    width: 100%; /* Prend toute la largeur du conteneur */
-    padding-left: 0; /* Enlève les marges par défaut */
-    margin: 0; /* Supprime les marges */
+/* Styles pour le numéro de téléphone */
+.header_phone {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-right: 10px;
+    white-space: nowrap;
 }
 
-/* Pour que le dropdown soit bien affiché sous les liens parent */
-.hover-dropdown:hover .dropdown-menu {
-    display: block;
-    background-color: #4a4a4a;
+/* Titre principal */
+.hh1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10%;
 }
+
+/* Responsive: Ajustement pour les petits écrans */
+@media (max-width: 992px) {
+    /* Styles de la navbar en slide bar */
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: -350px;  /* Commence caché à gauche */
+        width: 250px;  /* Largeur du slide bar */
+        height: 100vh;
+        background-color: #fffffff5;
+        transition: left 0.3s ease;
+        z-index: 1050;
+    }
+
+    .navbar-collapse.open {
+        left: 0;  /* Afficher le slide bar */
+    }
+
+    /* Aligner les éléments de la navbar à gauche dans le slide bar */
+    .navbar-nav {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;  /* Aligner les éléments à gauche */
+       
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1060;
+    }
+
+    .Logo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .Parent {
+        color: #000;
+    }
+
+    /* Cacher le titre principal et le numéro de téléphone */
+    .hh1 {
+        display: none;
+    }
+
+    .header_phone {
+        display: none;
+    }
+
+    /* Ajuster la navbar et les éléments */
+    .navbar {
+        height: auto;
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: relative;
+    }
+
+    /* Dropdown menu */
+    .hover-dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #343a40;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* Activer le menu déroulant par survol (pour 992px et moins) */
+    .hover-dropdown:hover .dropdown-menu {
+        display: block;
+        background-color: #4a4a4a;
+    }
+
+    .dropdown-menu .nav-link {
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    .dropdown-menu .nav-link:hover {
+        background-color: #495057;
+        color: #e1c340;
+    }
+}
+
+/* Ajustement pour les écrans plus petits de 768px */
+@media (max-width: 768px) {
+    /* Alignement vertical pour petits écrans */
+    .navbar .navbar-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Masquer le texte des icônes pour les petits écrans */
+    .header_phone {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Diminuer la taille de la police du titre principal */
+    .hh1 {
+        font-size: 24px;
+    }
+
+    /* Assurez-vous que le menu déroulant fonctionne de la même manière que dans 992px */
+    .hover-dropdown:hover .dropdown-menu {
+        display: block;
+        background-color: #4a4a4a;
+    }
+}
+
