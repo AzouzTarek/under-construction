@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Style de la barre de navigation */
+html {
+    background-color: ghostwhite;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column; /* Organiser la navbar en colonne */
+    margin: 0 50px; /* Ajout de marges sur les côtés */
+    background-color: #4a4a4a;
+    font-family: 'Poppins', sans-serif;
+    height: auto; /* S'adapte au contenu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 17px 17px;
+    padding: 10px 0; /* Padding pour espacement */
+    align-items: center; /* Centrer le contenu horizontalement */
+}
+
+/* Logo */
+.Logo {
+    width: 300px;
+}
+
+/* Styles pour les liens de navigation */
+.navbar .nav-link {
+    font-size: 22px;
+    transition: color 0.5s;
+    position: relative;
+    color: #fff;
+    padding: 5px 10px; /* Espacement des liens */
+    text-align: center; /* Centrer le texte des liens */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+}
+
+
+/* Changement de couleur pour tous les liens au survol */
+.navbar .nav-link:hover {
+    color: #e1c340; /* Couleur au survol */
+}
+
+/* Styles pour les éléments Parent (avec ligne sous chaque lien) */
+.navbar .Parent {
+    padding-bottom: 5px; /* Espacement sous les liens */
+}
+
+/* Pseudo-élément pour la ligne sous chaque lien */
+.navbar .Parent::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #e1c340;
+    width: 0;
+    transition: width 0.5s ease;
+    margin-top: 2px;
+}
+
+/* Révèle la ligne sous le lien au survol */
+.navbar .Parent:hover::after {
+    width: 100%;
+}
+
+/* Styles pour le menu déroulant */
+.hover-dropdown {
+    position: relative;
+}
+
+/* Styles pour le dropdown-menu */
+.dropdown-menu {
+    display: none; /* Par défaut, caché */
+    position: absolute; 
+    background-color: #343a40;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 0;
+    border: none;
+}
+
+/* Affiche le dropdown au survol */
+.hover-dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #4a4a4a;
+}
+
+/* Styles pour les éléments du dropdown */
+.dropdown-menu .nav-link {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+/* Hover sur les éléments du dropdown */
+.dropdown-menu .nav-link:hover {
+    background-color: #495057;
+    color: #e1c340;
+}
+
+/* Centrer les éléments de navigation */
+.navbar .navbar-nav {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    width: 100%; /* Prend toute la largeur du conteneur */
+    padding-left: 0; /* Enlève les marges par défaut */
+    margin: 0; /* Supprime les marges */
+}
+
+/* Pour que le dropdown soit bien affiché sous les liens parent */
+.hover-dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #4a4a4a;
+}

@@ -1,0 +1,174 @@
+/* Général */
+body {
+    background-color: #F3E9DC; /* Fond principal */
+    color: #4D4D4D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section En-tête */
+.header-section {
+    background-image: url('../image/Tozeur\ -\ Tunisie_.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.header-section h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.header-section .cta-button {
+    background-color: #60992D;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Barre de Navigation */
+.navbar {
+    background-color: #DDA15E;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+.navbar a:hover {
+    color: #F3E9DC;
+}
+
+/* Section Destinations */
+.destinations {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.destinations h2 {
+    color: #B5651D;
+    margin-bottom: 30px;
+}
+
+.destination-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    width: 250px;
+    margin: 15px;
+}
+
+.destination-card img {
+    width: 100%;
+    height: auto;
+}
+
+.destination-card h3 {
+    color: #B5651D;
+    padding: 10px 0;
+}
+
+.destination-card p {
+    padding: 0 15px 15px;
+}
+
+.destination-card button {
+    background-color: #60992D;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+}
+
+/* Section Nos Expériences */
+.experiences {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.experiences h2 {
+    color: #B5651D;
+    margin-bottom: 30px;
+}
+
+.experience-card {
+    display: inline-block;
+    background-color: #FFFFFF;
+    width: 250px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Section Témoignages */
+.testimonials {
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #B5651D;
+    margin-bottom: 30px;
+}
+
+.testimonial-card {
+    background-color: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    color: #4D4D4D;
+    display: inline-block;
+    width: 250px;
+}
+
+.testimonial-card h4 {
+    color: #B5651D;
+}
+
+/* Footer */
+.footer {
+    background-color: #468FAF;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #F3E9DC;
+    text-decoration: none;
+    margin: 0 10px;
+}
