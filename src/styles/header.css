@@ -1,4 +1,4 @@
-/* Styles généraux pour la navbar */
+/* General Navbar styling */
 .navbar {
     font-family: 'Open Sans', sans-serif;
     width: 100%;
@@ -15,7 +15,6 @@
     align-items: center;
     justify-content: center;
 }
-
 /* Conteneur pour les liens de navigation */
 .navbar .navbar-nav {
     display: flex;
@@ -24,19 +23,17 @@
     justify-content: center;
     width: 100%;
 }
-
 /* Décaler les éléments de navigation vers le bas */
 .navbar .navbar-nav .Parent {
     margin-top: 80px;
     margin-right: 20px;
 }
-
 /* Logo */
 .Logo {
     width: 200px;
 }
 
-/* Styles pour les liens de navigation */
+/* Navigation links */
 .navbar .nav-link {
     font-size: 14px;
     font-weight: 400;
@@ -46,7 +43,7 @@
     text-transform: uppercase;
 }
 
-/* Effet au survol */
+/* Hover effect for links */
 .navbar .nav-link:hover {
     color: #e1c340;
 }
@@ -65,7 +62,7 @@
     width: 100%;
 }
 
-/* Styles pour le menu déroulant */
+/* Dropdown Menu */
 .hover-dropdown {
     position: relative;
 }
@@ -94,7 +91,7 @@
     color: #e1c340;
 }
 
-/* Styles pour le numéro de téléphone */
+/* Header phone number */
 .header_phone {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
@@ -102,9 +99,10 @@
     color: #FFFFFF;
     margin-right: 10px;
     white-space: nowrap;
+    margin-bottom: 2%;
 }
 
-/* Titre principal */
+/* Main heading */
 .hh1 {
     font-family: 'Open Sans', sans-serif;
     color: #fff;
@@ -113,121 +111,172 @@
     margin-top: 10%;
 }
 
-/* Responsive: Ajustement pour les petits écrans */
+/* Responsive: Sidebar for smaller screens */
 @media (max-width: 992px) {
-    /* Styles de la navbar en slide bar */
+    /* Sidebar styling */
     .navbar-collapse {
         position: fixed;
         top: 0;
-        left: -350px;  /* Commence caché à gauche */
-        width: 250px;  /* Largeur du slide bar */
+        left: -100%; /* Hidden by default */
+        width: 250px; /* Sidebar width */
         height: 100vh;
-        background-color: #fffffff5;
+        background-color: #ffffff;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
         transition: left 0.3s ease;
         z-index: 1050;
+        padding-top: 20px;
+        overflow-y: auto;
     }
 
     .navbar-collapse.open {
-        left: 0;  /* Afficher le slide bar */
+        left: 0; /* Show sidebar */
     }
 
-    /* Aligner les éléments de la navbar à gauche dans le slide bar */
-    .navbar-nav {
-        flex-direction: column;
-        gap: 5px;
-        align-items: flex-start;  /* Aligner les éléments à gauche */
-       
-    }
-
+    /* Sidebar toggle button */
     .navbar-toggler {
         position: absolute;
         right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 20px;
         z-index: 1060;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
     }
 
-    .Logo {
-        width: 150px;
-        margin-bottom: 10px;
+    /* Sidebar navigation links */
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        padding: 10px 20px;
     }
 
     .navbar-nav .Parent {
+        font-size: 16px;
+        font-weight: 500;
         color: #000;
+        text-transform: uppercase;
     }
 
-    /* Cacher le titre principal et le numéro de téléphone */
-    .hh1 {
-        display: none;
+    .navbar-nav .Parent:hover {
+        color: #e1c340;
     }
 
-    .header_phone {
-        display: none;
-    }
-
-    /* Ajuster la navbar et les éléments */
-    .navbar {
-        height: auto;
-        padding: 10px 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        position: relative;
-    }
-
-    /* Dropdown menu */
+    /* Sidebar dropdown */
     .hover-dropdown {
         position: relative;
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        background-color: #343a40;
-        border-radius: 5px;
-        margin-top: 5px;
-        padding: 0;
         width: 100%;
     }
 
-    /* Activer le menu déroulant par survol (pour 992px et moins) */
+    .hover-dropdown .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        position: relative;
+        background-color: #eaeaea;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
     .hover-dropdown:hover .dropdown-menu {
-        display: block;
-        background-color: #4a4a4a;
+        display: flex;
     }
 
     .dropdown-menu .nav-link {
-        padding: 10px 15px;
-        text-align: center;
+        padding: 8px 15px;
+        color: #333;
     }
 
     .dropdown-menu .nav-link:hover {
         background-color: #495057;
         color: #e1c340;
     }
-}
 
-/* Ajustement pour les écrans plus petits de 768px */
-@media (max-width: 768px) {
-    /* Alignement vertical pour petits écrans */
-    .navbar .navbar-nav {
-        flex-direction: column;
-        gap: 5px;
+    /* Sidebar logo */
+    .Logo {
+        width: 150px;
+        margin-bottom: 20px;
+        align-self: center;
     }
 
-    /* Masquer le texte des icônes pour les petits écrans */
+    /* Hide main heading and phone number on mobile */
+    .hh1, .header_phone {
+        display: none;
+    }
+}
+
+
+/* Petit écran (jusqu'à 768px) */
+@media (max-width: 768px) {
+    .Logo{
+        width: 300px !important;
+    }
+    /* Réduire l'espacement entre les éléments de la sidebar */
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start; /* Aligner les éléments à gauche */
+        width: 100%; /* Assurer que la nav occupe toute la largeur */
+        gap: 0; /* Enlever tout espacement */
+        margin: 0 !important; /* Enlever les marges */
+        padding: 0 !important; /* Enlever les paddings */
+    }
+
+    .navbar-nav .Parent {
+        text-align: left; /* Aligner le texte à gauche */
+        width: 100%; /* Assurer que chaque lien prend toute la largeur */
+        margin: 0 !important; /* Enlever les marges */
+        padding: 0 !important; /* Enlever le padding */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 5px 0 !important; /* Réduire le padding des liens */
+        margin: 0 !important; /* Enlever toute marge des liens */
+    }
+
+    /* Changer la couleur de fond du menu déroulant lorsqu'il est affiché */
+    .hover-dropdown .dropdown-menu {
+        left: 0; /* Alignement à gauche du menu déroulant */
+        width: 100%; /* Le menu déroulant prend toute la largeur */
+        background-color: #ffffff; /* Couleur de fond par défaut du menu déroulant */
+    }
+
+    /* Changer le fond du menu déroulant au survol du parent */
+    .hover-dropdown:hover .dropdown-menu {
+        background-color: #eaeaea; /* Nouvelle couleur de fond quand on survole le parent */
+    }
+
+    /* Changer la couleur des liens du menu déroulant */
+    .hover-dropdown .dropdown-menu .nav-link {
+        color: #333; /* Couleur des liens du menu déroulant */
+    }
+
+    /* Couleur de fond des liens au survol */
+    .hover-dropdown .dropdown-menu .nav-link:hover {
+        background-color: #b8976d; /* Couleur de fond au survol du lien */
+        color: #fff; /* Couleur du texte au survol */
+    }
+
+    /* Afficher le numéro de téléphone et cacher le titre sur mobile */
     .header_phone {
         display: flex;
         align-items: center;
     }
 
-    /* Diminuer la taille de la police du titre principal */
     .hh1 {
         font-size: 24px;
     }
 
-    /* Assurez-vous que le menu déroulant fonctionne de la même manière que dans 992px */
-    .hover-dropdown:hover .dropdown-menu {
-        display: block;
-        background-color: #4a4a4a;
+    /* Masquer le titre et le numéro de téléphone sur les écrans mobiles */
+    .hh1, .header_phone {
+        display: none;
     }
+    
 }
+
+
+
+
+
 

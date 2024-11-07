@@ -8,10 +8,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import CallIcon from '@mui/icons-material/Call';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);  // Gestion de l'état du menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleToggle = () => {
-    setIsMenuOpen(!isMenuOpen);  // Ouvrir/fermer le menu
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -23,7 +23,7 @@ const Header = () => {
               <img src={logo} alt="Logo" className="Logo mb-3" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
-            <Navbar.Collapse id="basic-navbar-nav" className={`w-100 ${isMenuOpen ? 'open' : ''}`}>
+            <Navbar.Collapse id="basic-navbar-nav" className={`navbar-collapse ${isMenuOpen ? 'open' : ''}`}>
               <Nav className="ms-auto d-flex flex-column flex-lg-row align-items-center justify-content-center">
                 <Nav.Link href="#home" className="Parent">Accueil</Nav.Link>
                 <div className="hover-dropdown">
@@ -46,7 +46,11 @@ const Header = () => {
                 <Nav.Link href="#home" className="Parent">Contact</Nav.Link>
               </Nav>
             </Navbar.Collapse>
-            <div className="header_phone ml-auto"><CallIcon /> 216-28 642 656</div>
+
+            {/* Affichage du numéro de téléphone dans la Sidebar pour petits écrans */}
+            <div className="header_phone sidebar-phone">
+              <CallIcon /> 216-28 642 656
+            </div>
           </Container>
           <h1 className='hh1'>Let us take you away</h1>
         </Navbar>
