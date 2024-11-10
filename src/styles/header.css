@@ -7,7 +7,7 @@
     z-index: 2;
     position: relative;
     height: 65vh;
-    background-image: url('../image/1.jpg');
+    background-image: url('../image/12.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,14 +30,14 @@
 }
 /* Logo */
 .Logo {
-    width: 200px;
+    width: 250px;
 }
 
 /* Navigation links */
 .navbar .nav-link {
     font-size: 14px;
-    font-weight: 400;
-    color: #a5a5a5;
+    font-weight: 700;
+    color: #fff;
     transition: color 0.5s;
     padding: 5px 10px;
     text-transform: uppercase;
@@ -96,7 +96,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #cba05c;
     margin-right: 10px;
     white-space: nowrap;
     margin-bottom: 2%;
@@ -109,6 +109,54 @@
     text-transform: uppercase;
     text-align: center;
     margin-top: 10%;
+}
+.intro
+{
+	width: 100%;
+    background-image:url('../image/into1.svg');
+	z-index: 1;
+    
+  
+  
+}
+.intro_background
+{
+	position: absolute;
+	top: -128px;
+	left: 0;
+	width: 100%;
+	height: 480px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.intro_container
+{
+	width: 100%;
+	border-bottom: solid 2px #e4e6e8;
+	padding-top: 350px;
+	padding-bottom: 121px;
+    padding-left: 200px;
+}
+.intro_icon
+{
+	width: 70px;
+	height: 71px;
+}
+.intro_icon img
+{
+	max-width: 100%;
+}
+.intro_content
+{
+	padding-left: 28px;
+}
+.intro_title
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	color: #181818;
+	font-weight: 400;
 }
 
 /* Responsive: Sidebar for smaller screens */

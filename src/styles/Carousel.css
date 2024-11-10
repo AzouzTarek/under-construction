@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global font style */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    
+}
+
+/* Carousel container */
+#carousel-container {
+    width: 100%;
+    max-width: 1200px;  /* Max width for the entire carousel */
+    margin: 0 auto;     /* Center the carousel */
+    padding: 20px 0;
+   
+}
+/* Conteneur pour le fond de couleur centré avec des marges latérales */
+#carousel-background {
+    max-width: 90%;        /* Limite la largeur totale, ajustez selon vos besoins */
+    margin: 0 auto;        /* Centre le conteneur */
+    background-image: url('../image/1.jpg');
+    padding: 20px 0;
+    justify-content: center;
+    border-radius: 10px;   /* Coins arrondis pour un style plus élégant */
+}
+
+/* Slick slider container */
+#carousel-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Each carousel item */
+#carousel-container .carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Vertically center content */
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px;         /* Consistent item width */
+    margin: 15px;             /* Spacing between items */
+    position: relative;
+    overflow: hidden; /* S'assure que l'image ne dépasse pas les bords de l'élément */
+    border-radius: 10px;
+}
+
+/* Carousel image styling */
+#carousel-container .carousel-image {
+    width: 100%;             /* Ensure image takes full container width */
+    max-width: 300px;        /* Limit the width */
+    height: 200px;           /* Fixed height */
+    object-fit: cover;       /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+
+/* Title and description styling */
+#carousel-container .carousel-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+    
+}
+.carousel-content{
+    background: rgba(255, 255, 255, 0.8);
+    height: 230px;
+    padding: 15px;
+}
+
+#carousel-container .carousel-item p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin: 0;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    #carousel-container .carousel-item {
+        max-width: 250px; /* Slightly smaller width on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #carousel-container .carousel-item {
+        max-width: 80%; /* Takes up more space on smaller screens */
+    }
+    #carousel-container .carousel-image {
+        height: 180px; /* Adjust image height */
+    }
+}
+
+@media (max-width: 480px) {
+    #carousel-container .carousel-item {
+        max-width: 100%; /* Full width on very small screens */
+    }
+    #carousel-container .carousel-image {
+        height: 150px; /* Adjust image height for mobile */
+    }
+}
+
+/* Styling for carousel navigation dots */
+#carousel-slider .slick-dots {
+    bottom: 10px;
+}
+
+#carousel-slider .slick-dots li button {
+    background-color: #C89F7A; /* Dot color */
+}
+
+#carousel-slider .slick-dots li.slick-active button {
+    background-color: #5C4D2F; /* Active dot color */
+}

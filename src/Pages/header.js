@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import '../styles/header.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from '../image/Logo3.svg';
+import logo from '../image/Logo2.svg';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CallIcon from '@mui/icons-material/Call';
-
+import photo8 from '../image/beach.svg';
+import photo9 from '../image/wallet.svg';
+import photo10 from '../image/suitcase.svg';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -55,6 +57,53 @@ const Header = () => {
           <h1 className='hh1'>Let us take you away</h1>
         </Navbar>
       </div>
+      <div class="intro">
+	
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="intro_container">
+						<div class="row">
+
+							{/* -- Intro Item -- */}
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src={photo8} alt=""/></div>
+									<div class="intro_content">
+										<div class="intro_title">Top Destinations</div>
+										<div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+									</div>
+								</div>
+							</div>
+
+							{/* -- Intro Item -- */}
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src={photo9} alt=""/></div>
+									<div class="intro_content">
+										<div class="intro_title">The Best Prices</div>
+										<div class="intro_subtitle"><p>Sollicitudin mauris lobortis in.</p></div>
+									</div>
+								</div>
+							</div>
+
+							{/*-- Intro Item  */}
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src={photo10} alt=""/></div>
+									<div class="intro_content">
+										<div class="intro_title">Amazing Services</div>
+										<div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
     </div>
   );
 };

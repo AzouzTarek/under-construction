@@ -59,9 +59,9 @@
 
 /* Style pour la ligne séparatrice */
 hr {
-    border-top: 3px solid #C89F7A; /* Changez l'épaisseur et la couleur de la ligne */
+    border-top: 3px solid #d9d9d9; /* Changez l'épaisseur et la couleur de la ligne */
     margin: 20px 0; /* Espacement au-dessus et en-dessous de la ligne */
-    width: 80%; /* Contrôle la largeur de la ligne */
+    width: 70%; /* Contrôle la largeur de la ligne */
     margin-left: auto;
     margin-right: auto; /* Centrer la ligne */
 }
@@ -119,6 +119,8 @@ hr {
     max-width: 900px;
     margin: 0 auto;
 }
+
+
 
 /* Pour les écrans mobiles : ajuster les tailles et la mise en page */
 @media (max-width: 768px) {

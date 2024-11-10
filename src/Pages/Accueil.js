@@ -9,6 +9,9 @@ import photo5 from '../image/Douz - Tunisie.jpg';
 import photo6 from '../image/Star Wars setting.jpg';
 import photo7 from '../image/The ultimate road trip through South Tunisia.jpg';
 
+import Carousel from './Carousel';
+import CustomerReview from './CustomerReview';
+
 const Accueil = () => {
   const [showContent, setShowContent] = useState(false);  // Contrôle de l'affichage du contenu
   const [currentImage, setCurrentImage] = useState(0);
@@ -41,8 +44,7 @@ const Accueil = () => {
      
       <Header />
       <div id="container">
-       
-        <hr />
+
         {showContent && (
           <div id="content" className="fadeInContent">
             <div className="contentWrapper">
@@ -63,6 +65,12 @@ const Accueil = () => {
           </div>
         )}
       </div>
+      
+      <hr />
+      <Carousel />
+      <hr/>
+      <CustomerReview/>
+     
     </div>
   );
 };
